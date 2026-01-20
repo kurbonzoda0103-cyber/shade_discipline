@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shade: Black Discipline</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        body { background: #000; color: #fff; font-family: sans-serif; text-align: center; margin: 0; padding: 20px; }
+        .balance { font-size: 24px; color: #ff4d4d; margin-bottom: 20px; }
+        .main-btn { 
+            width: 200px; height: 200px; border-radius: 50%; border: 4px solid #333;
+            background: url('https://i.ibb.co/L9C5x9s/cyborg-art.png') center/cover;
+            margin: 40px auto; box-shadow: 0 0 20px #ff4d4d33;
+        }
+        .status { color: #888; text-transform: uppercase; letter-spacing: 2px; }
+        .action-btn { 
+            background: #ff4d4d; color: #000; padding: 15px 40px; 
+            border: none; border-radius: 5px; font-weight: bold; font-size: 18px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="status">Статус: Архитектор Тени</div>
+    <div class="balance">$SHADE: <span id="score">0</span></div>
+    <div class="main-btn" id="tap-area"></div>
+    <button class="action-btn" onclick="startSleep()">АКТИВИРОВАТЬ СОН</button>
+
+    <script>
+        let tg = window.Telegram.WebApp;
+        tg.expand(); // Развернуть на весь экран
+        
+        let score = 0;
+        function startSleep() {
+            alert("Протокол сна запущен. Не закрывай приложение.");
+            // Здесь будет логика начисления баллов через PuzzleBot
+        }
+    </script>
+</body>
+</html>
